@@ -1,0 +1,1 @@
+yes ''|head -n NUM1 >\\;ls -l --block-size=NUM2 \\|cut -d' ' -f5
