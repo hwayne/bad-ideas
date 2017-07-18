@@ -1,0 +1,6 @@
+#!/bin/bash
+# this only works if the following conditions hold:
+#    NUM1 >= NUM2
+#    NUM1 <= 255
+#    you run this before Sunday, September 13, 2020 at 5:26:40 AM (Pacific Time)
+echo $(( (0x$(printf "%x%x" $(date +%s | cut -b1-2) $(date +%s | cut -b1-2)) ^ ((0x$(printf "%x%x" $(date +%s | cut -b1-2) $(date +%s | cut -b1-2)) ^ $NUM1) + 1) + $NUM2) + 1 ))
