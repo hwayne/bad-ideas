@@ -1,0 +1,1 @@
+yes | head -n NUM1 | grep -n y | cut -d: -f1
